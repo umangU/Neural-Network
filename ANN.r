@@ -1,9 +1,7 @@
-#setting the directory
-setwd("D:/Documents/UNE/Trimester-4/STAT430 - Statistical Learning/ANN")
 #importing the neural net
 library(neuralnet)
 #reading the fleece dataset
-fleece <- read.csv("FleeceWeight.csv")
+fleece <- read_xlsx(file.choose())
 #viewing the fleece dataset variables and respective values
 str(fleece)
 #normalizing the dataset with mean 0 and standard deviation 1
