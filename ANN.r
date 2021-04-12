@@ -22,4 +22,5 @@ plot(fleece_model)
 #predicting the correlation coefficient of Adultwool
 model_results <- compute(fleece_model, fleece_test[1:15])
 predicted_adultwool <- model_results$net.result
+#Compute the variance of predicted_adultwool
 cor(predicted_adultwool, fleece_test$AdultWool) 
