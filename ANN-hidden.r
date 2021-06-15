@@ -1,15 +1,15 @@
-#importing the neural net
+# importing the neural net
 library(neuralnet)
-#reading the fleece dataset
+# reading the fleece dataset
 fleece <- read_xlsx(file.choose())
-#viewing the fleece dataset variables and respective values
+# viewing the fleece dataset variables and respective values
 str(fleece)
-#normalizing the dataset with mean 0 and standard deviation 1
+# normalizing the dataset with mean 0 and standard deviation 1
 normalize <- function(x){
  return((x-min(x))/(max(x)-min(x)))
 }
 fleece_norm <- as.data.frame(lapply(fleece, normalize))
-#viewing the normalized dataset
+# viewing the normalized dataset
 str(fleece_norm)
 #dividing the dataset into train and test
 fleece_train <- fleece_norm[1:3000,]
